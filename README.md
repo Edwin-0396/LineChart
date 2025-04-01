@@ -53,3 +53,4 @@ For issues or feature requests, please create an issue in the repository.
 ## License
 
 This widget is licensed under the MIT License.
+# LineChart
