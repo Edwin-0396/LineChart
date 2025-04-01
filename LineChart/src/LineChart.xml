@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.linechart.LineChart" pluginWidget="true" needsEntityContext="false" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Line Chart</name>
+    <description>Widget for displaying telemetry data as line charts</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="Data Source">
+            <property key="telemetryData" type="datasource" isList="true" required="true">
+                <caption>Telemetry Data</caption>
+                <description>Select the datasource containing telemetry information</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Appearance">
+            <property key="dataAttribute" type="enumeration" defaultValue="all">
+                <caption>Data Attribute</caption>
+                <description>Select which attribute to display (select 'All' to show all)</description>
+                <enumerationValues>
+                    <enumerationValue key="all">All</enumerationValue>
+                    <enumerationValue key="volt">Volt</enumerationValue>
+                    <enumerationValue key="rotate">Rotate</enumerationValue>
+                    <enumerationValue key="pressure">Pressure</enumerationValue>
+                    <enumerationValue key="vibration">Vibration</enumerationValue>
+                </enumerationValues>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
