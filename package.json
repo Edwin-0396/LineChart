@@ -1,0 +1,48 @@
+{
+  "name": "mendix-line-chart-widget",
+  "widgetName": "LineChart",
+  "version": "1.0.0",
+  "description": "A line chart widget for Mendix that displays pressure, vibration, and voltage data",
+  "copyright": "© 2023",
+  "author": "Edwin",
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "MIT",
+  "config": {
+    "projectPath": "/Users/kellyvelasquez/Mendix/Predictive Maintenance PoC-feature_PRE-4-LineChart",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": 3000
+  },
+  "packagePath": "mendix",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:server",
+    "dev": "pluggable-widgets-tools start:web",
+    "build": "pluggable-widgets-tools build:web",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:web",
+    "test": "pluggable-widgets-tools test:unit"
+  },
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^9.0.0"
+  },
+  "dependencies": {
+    "@antv/g2": "^4.2.10"
+  },
+  "resolutions": {
+    "react": "^18.2.0",
+    "react-native": "0.72.7",
+    "react-dom": "18.2.0",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0"
+  },
+  "overrides": {
+    "react": "^18.2.0",
+    "react-native": "0.72.7",
+    "react-dom": "18.2.0",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0"
+  }
+}

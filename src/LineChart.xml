@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="mendix.linechart.LineChart" pluginWidget="true" needsEntityContext="false" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+
+    <name>Line Chart</name>
+    <description>A line chart that displays telemetry data for pressure, vibration, and voltage over time</description>
+    
+    <properties>
+        <propertyGroup caption="Data Source">
+            <property key="dataSource" type="datasource" isList="true" required="true">
+                <caption>Data Source</caption>
+                <description>List of telemetry data points to visualize</description>
+            </property>
+            
+            <property key="timeStampAttr" type="attribute" dataSource="dataSource" required="true">
+                <caption>DateTime Attribute</caption>
+                <description>Attribute containing the timestamp</description>
+                <attributeTypes>
+                    <attributeType name="DateTime"/>
+                </attributeTypes>
+            </property>
+            
+            <property key="pressureAttr" type="attribute" dataSource="dataSource" required="true">
+                <caption>Pressure Attribute</caption>
+                <description>Attribute containing the pressure value</description>
+                <attributeTypes>
+                    <attributeType name="Decimal"/>
+                    <attributeType name="Integer"/>
+                </attributeTypes>
+            </property>
+
+            <property key="vibrationAttr" type="attribute" dataSource="dataSource" required="true">
+                <caption>Vibration Attribute</caption>
+                <description>Attribute containing the vibration value</description>
+                <attributeTypes>
+                    <attributeType name="Decimal"/>
+                    <attributeType name="Integer"/>
+                </attributeTypes>
+            </property>
+
+            <property key="voltageAttr" type="attribute" dataSource="dataSource" required="true">
+                <caption>Volt Attribute</caption>
+                <description>Attribute containing the voltage value</description>
+                <attributeTypes>
+                    <attributeType name="Decimal"/>
+                    <attributeType name="Integer"/>
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+        
+        <propertyGroup caption="Appearance">
+            <property key="height" type="integer" defaultValue="400">
+                <caption>Chart Height</caption>
+                <description>Height of the chart in pixels</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
