@@ -24,7 +24,7 @@ export function LineChart(props) {
         const chart = chartInstance.current;
 
         if (!props.dataSource?.items?.length) {
-            console.warn("No items in data source");
+            console.warn("No Items in data source");
             showEmptyMessage(chart);
             return;
         }
